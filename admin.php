@@ -1,7 +1,7 @@
 <?php
   $page_title = 'Admin Home Page';
   require_once('includes/load.php');
-  //Consigner Quel niveau l’utilisateur est autorisé à afficher cette page
+  // Checkin What level user has permission to view this page
    page_require_level(1);
 ?>
 <?php
@@ -29,7 +29,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Utilisateurs</p>
+          <p class="text-muted">Users</p>
         </div>
        </div>
     </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_product['total']; ?> </h2>
-          <p class="text-muted">Produits</p>
+          <p class="text-muted">Products</p>
         </div>
        </div>
     </div>
@@ -67,11 +67,11 @@
     <div class="col-md-3">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-green">
-          <i class="glyphicon ">CFA</i>
+          <i class="glyphicon glyphicon-usd"></i>
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
-          <p class="text-muted">Ventes</p>
+          <p class="text-muted">Sales</p>
         </div>
        </div>
     </div>
@@ -84,16 +84,16 @@
        <div class="panel-heading">
          <strong>
            <span class="glyphicon glyphicon-th"></span>
-           <span>Produits les plus vendus</span>
+           <span>Highest Selling Products</span>
          </strong>
        </div>
        <div class="panel-body">
          <table class="table table-striped table-bordered table-condensed">
           <thead>
            <tr>
-             <th>Titre</th>
-             <th>Total vendu</th>
-             <th>Quantité totale</th>
+             <th>Title</th>
+             <th>Total Sold</th>
+             <th>Total Quantity</th>
            <tr>
           </thead>
           <tbody>
@@ -114,7 +114,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>DERNIÈRES VENTES</span>
+            <span>LATEST SALES</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -122,9 +122,9 @@
        <thead>
          <tr>
            <th class="text-center" style="width: 50px;">#</th>
-           <th>Nom du produit</th>
+           <th>Product Name</th>
            <th>Date</th>
-           <th>Vente totale</th>
+           <th>Total Sale</th>
          </tr>
        </thead>
        <tbody>
@@ -137,7 +137,7 @@
            </a>
            </td>
            <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td>FCFA<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
+           <td> FCFA<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
         </tr>
 
        <?php endforeach; ?>
@@ -151,7 +151,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Produits récemment ajoutés</span>
+          <span>Recently Added Products</span>
         </strong>
       </div>
       <div class="panel-body">

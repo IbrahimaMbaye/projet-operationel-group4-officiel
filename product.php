@@ -16,7 +16,7 @@
          <div class="pull-right">
          <div>
             
-            <h2>Barre de recherche utilisant PHP</h2>
+            <h2>search bar using php</h2>
             <form method="post">
               <label>Search</label>
               <input type="text" name="search">
@@ -38,12 +38,12 @@ if (isset($_POST["submit"])){
         <table class="table table-bordered">
             <thead>
               <tr>
-                <th class="text-center" style="width: 50px;">Nom</th>
-                <th class="text-center" style="width: 10%;"> quantité</th>
-                <th class="text-center" style="width: 10%;"> prix d’achat </th>
+                <th class="text-center" style="width: 50px;">Name</th>
+                <th class="text-center" style="width: 10%;"> quantity</th>
+                <th class="text-center" style="width: 10%;"> buy price </th>
                 <th class="text-center" style="width: 10%;"> sale price </th>
-                <th class="text-center" style="width: 10%;"> Catégories </th>
-                <th class="text-center" style="width: 10%;"> ID du support </th>
+                <th class="text-center" style="width: 10%;"> Categories </th>
+                <th class="text-center" style="width: 10%;"> Media Id </th>
                 <th class="text-center" style="width: 10%;"> Date </th>
               </tr>
             </thead>
@@ -67,12 +67,12 @@ if (isset($_POST["submit"])){
     }
     
     else{
-        echo  "Le nom n’existe pas";
+        echo  "Name Does not exist";
     }
 }
 ?>
           </div>
-           <a href="add_product.php" class="btn btn-primary">Ajouter un nouveau</a>
+           <a href="add_product.php" class="btn btn-primary">Add New</a>
          </div>
         </div>
         <div class="panel-body">
@@ -81,12 +81,12 @@ if (isset($_POST["submit"])){
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Photo</th>
-                <th> Titre du produit </th>
+                <th> Product Title </th>
                 <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> En stock </th>
+                <th class="text-center" style="width: 10%;"> In-Stock </th>
                 <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Prix de vente </th>
-                <th class="text-center" style="width: 10%;"> Produit ajouté </th>
+                <th class="text-center" style="width: 10%;"> Selling Price </th>
+                <th class="text-center" style="width: 10%;"> Product Added </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
             </thead>
@@ -125,4 +125,4 @@ if (isset($_POST["submit"])){
       </div>
     </div>
   </div>
-  <?php include_once('layouts/footer.php');?>
+  <?php include_once('layouts/footer.php'); ?>

@@ -1,3 +1,4 @@
+
 <?php
   $page_title = 'Add Sale';
   require_once('includes/load.php');

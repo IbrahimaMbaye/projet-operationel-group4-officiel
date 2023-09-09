@@ -8,15 +8,15 @@ $password = remove_junk($_POST['password']);
 if(empty($errors)){
   $user_id = authenticate($username, $password);
   if($user_id){
-    //Créer une session avec ID
+    //create session with id
      $session->login($user_id);
-    //Mettre à jour l’heure de connexion
+    //Update Sign in time
      updateLastLogIn($user_id);
-     $session->msg("s", "Bienvenue dans le système de gestion des stocks");
+     $session->msg("s", "Welcome to Inventory Management System");
      redirect('admin.php',false);
 
   } else {
-    $session->msg("d", "Désolé Nom d’utilisateur/mot de passe incorrect.");
+    $session->msg("d", "Sorry Username/Password incorrect.");
     redirect('index.php',false);
   }
 

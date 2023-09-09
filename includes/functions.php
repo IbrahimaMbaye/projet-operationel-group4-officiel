@@ -2,8 +2,8 @@
  $errors = array();
 
  /*--------------------------------------------------------------*/
- /* Fonction spéciale Supprimer les échappements
- /* caractères d’une chaîne à utiliser dans une instruction SQL
+ /* Function for Remove escapes special
+ /* characters in a string for use in an SQL statement
  /*--------------------------------------------------------------*/
 function real_escape($str){
   global $con;
@@ -11,7 +11,7 @@ function real_escape($str){
   return $escape;
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour Supprimer les caractères html
+/* Function for Remove html characters
 /*--------------------------------------------------------------*/
 function remove_junk($str){
   $str = nl2br($str);
@@ -19,7 +19,7 @@ function remove_junk($str){
   return $str;
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour le premier caractère majuscule
+/* Function for Uppercase first character
 /*--------------------------------------------------------------*/
 function first_character($str){
   $val = str_replace('-'," ",$str);
@@ -27,7 +27,7 @@ function first_character($str){
   return $val;
 }
 /*--------------------------------------------------------------*/
-/* Fonction de vérification des champs de saisie non vide
+/* Function for Checking input fields not empty
 /*--------------------------------------------------------------*/
 function validate_fields($var){
   global $errors;
@@ -40,7 +40,7 @@ function validate_fields($var){
   }
 }
 /*--------------------------------------------------------------*/
-/* Fonction d’affichage du message de session
+/* Function for Display Session Message
    Ex echo displayt_msg($message);
 /*--------------------------------------------------------------*/
 function display_msg($msg =''){
@@ -58,7 +58,7 @@ function display_msg($msg =''){
    }
 }
 /*--------------------------------------------------------------*/
-/* Fonction de redirection
+/* Function for redirect
 /*--------------------------------------------------------------*/
 function redirect($url, $permanent = false)
 {
@@ -70,7 +70,7 @@ function redirect($url, $permanent = false)
     exit();
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour connaître le prix de vente total, le prix d’achat et le bénéfice
+/* Function for find out total saleing price, buying price and profit
 /*--------------------------------------------------------------*/
 function total_price($totals){
    $sum = 0;
@@ -83,7 +83,7 @@ function total_price($totals){
    return array($sum,$profit);
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour date et heure lisible
+/* Function for Readable date time
 /*--------------------------------------------------------------*/
 function read_date($str){
      if($str)
@@ -92,7 +92,7 @@ function read_date($str){
       return null;
   }
 /*--------------------------------------------------------------*/
-/* Fonction pour Readable Rendre l’heure de date
+/* Function for  Readable Make date time
 /*--------------------------------------------------------------*/
 function make_date(){
   return strftime("%Y-%m-%d %H:%M:%S", time());

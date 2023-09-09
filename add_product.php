@@ -1,7 +1,7 @@
 <?php
   $page_title = 'Add Product';
   require_once('includes/load.php');
-  // Consigner Quel niveau l’utilisateur est autorisé à afficher cette page
+  // Checkin What level user has permission to view this page
   page_require_level(2);
   $all_categories = find_all('categories');
   $all_photo = find_all('media');
@@ -56,7 +56,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Ajouter un nouveau produit</span>
+            <span>Add New Product</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -67,14 +67,14 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Titre du produit">
+                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                      <option value="">Sélectionnez la catégorie de produit</option>
+                      <option value="">Select Product Category</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
                         <?php echo $cat['name'] ?></option>
@@ -83,7 +83,7 @@
                   </div>
                   <div class="col-md-6">
                     <select class="form-control" name="product-photo">
-                      <option value="">Sélectionnez une photo du produit</option>
+                      <option value="">Select Product Photo</option>
                     <?php  foreach ($all_photo as $photo): ?>
                       <option value="<?php echo (int)$photo['id'] ?>">
                         <?php echo $photo['file_name'] ?></option>
@@ -100,30 +100,30 @@
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Quantité de produit">
+                     <input type="number" class="form-control" name="product-quantity" placeholder="Product Quantity">
                   </div>
                  </div>
                  <div class="col-md-4">
                    <div class="input-group">
                      <span class="input-group-addon">
-                       <i class="glyphicon ">FCFA</i>
+                       <i class="glyphicon glyphicon-usd"></i>
                      </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Prix d’achat">
+                     <input type="number" class="form-control" name="buying-price" placeholder="Buying Price">
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
                   <div class="col-md-4">
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon ">FCFA</i>
+                        <i class="glyphicon glyphicon-usd"></i>
                       </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Prix de vente">
+                      <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>
                </div>
               </div>
-              <button type="submit" name="add_product" class="btn btn-danger">Ajouter un produit</button>
+              <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
           </form>
          </div>
         </div>

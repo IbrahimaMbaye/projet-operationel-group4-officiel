@@ -181,32 +181,32 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Fonction permettant de déterminer quel niveau d’utilisateur a accès à la page
+  /* Function for cheaking which user level has access to page
   /*--------------------------------------------------------------*/
    function page_require_level($require_level){
      global $session;
      $current_user = current_user();
      $login_level = find_by_groupLevel($current_user['user_level']);
-     //Si l’utilisateur ne se connecte pas
+     //if user not login
      if (!$session->isUserLoggedIn(true)):
             $session->msg('d','Please login...');
             redirect('index.php', false);
-      //si l’état du groupe est désactivé
-     elseif($login_level['group_status'] === '0'):
-           $session->msg('d','Cet utilisateur de niveau a été de bande!');
+      //if Group status Deactive
+      //elseif($login_level['group_status'] === '0'):
+           $session->msg('d','This level user has been band!');
            redirect('home.php',false);
-      //cheackin log in Le niveau de l’utilisateur et le niveau d’exigence sont inférieurs ou égaux à
+      //cheackin log in User level and Require level is Less than or equal to
      elseif($current_user['user_level'] <= (int)$require_level):
               return true;
       else:
-            $session->msg("d", "Sorry! Vous n’êtes pas autorisée à afficher la page.");
+            $session->msg("d", "Sorry! you dont have permission to view the page.");
             redirect('home.php', false);
         endif;
 
      }
    /*--------------------------------------------------------------*/
-   /* Fonction de recherche de tous les noms de produits
-   /* JOIN avec la catégorie et la table de la base de données des médias
+   /* Function for Finding all product name
+   /* JOIN with categorie  and media database table
    /*--------------------------------------------------------------*/
   function join_product_table(){
      global $db;
@@ -220,8 +220,8 @@ function tableExists($table){
 
    }
   /*--------------------------------------------------------------*/
-  /* Fonction de recherche de tous les noms de produits
-  /* Demande provenant d’ajax.php pour la suggestion automatique
+  /* Function for Finding all product name
+  /* Request coming from ajax.php for auto suggest
   /*--------------------------------------------------------------*/
 
    function find_product_by_title($product_name){
@@ -233,8 +233,8 @@ function tableExists($table){
    }
 
   /*--------------------------------------------------------------*/
-  /* Fonction de recherche de toutes les informations sur le produit par titre de produit
-  /* Demande venant d’ajax.php
+  /* Function for Finding all product info by product title
+  /* Request coming from ajax.php
   /*--------------------------------------------------------------*/
   function find_all_product_info_by_title($title){
     global $db;
@@ -245,7 +245,7 @@ function tableExists($table){
   }
 
   /*--------------------------------------------------------------*/
-  /* Fonction pour Mettre à jour la quantité de produit
+  /* Function for Update product quantity
   /*--------------------------------------------------------------*/
   function update_product_qty($qty,$p_id){
     global $db;
@@ -257,7 +257,7 @@ function tableExists($table){
 
   }
   /*--------------------------------------------------------------*/
-  /* Fonction d’affichage Produit récent ajouté
+  /* Function for Display Recent product Added
   /*--------------------------------------------------------------*/
  function find_recent_product_added($limit){
    global $db;
@@ -269,7 +269,7 @@ function tableExists($table){
    return find_by_sql($sql);
  }
  /*--------------------------------------------------------------*/
- /* Fonction pour trouver le produit le plus vendu
+ /* Function for Find Highest saleing Product
  /*--------------------------------------------------------------*/
  function find_higest_saleing_product($limit){
    global $db;
@@ -281,7 +281,7 @@ function tableExists($table){
    return $db->query($sql);
  }
  /*--------------------------------------------------------------*/
- /* Fonction pour trouver toutes les ventes
+ /* Function for find all sales
  /*--------------------------------------------------------------*/
  function find_all_sale(){
    global $db;
@@ -292,7 +292,7 @@ function tableExists($table){
    return find_by_sql($sql);
  }
  /*--------------------------------------------------------------*/
- /* Fonction d’affichage Vente récente
+ /* Function for Display Recent sale
  /*--------------------------------------------------------------*/
 function find_recent_sale_added($limit){
   global $db;
@@ -303,7 +303,7 @@ function find_recent_sale_added($limit){
   return find_by_sql($sql);
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour Générer un rapport de ventes par deux dates
+/* Function for Generate sales report by two dates
 /*--------------------------------------------------------------*/
 function find_sale_by_dates($start_date,$end_date){
   global $db;
@@ -322,7 +322,7 @@ function find_sale_by_dates($start_date,$end_date){
   return $db->query($sql);
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour générer un rapport de ventes quotidien
+/* Function for Generate Daily sales report
 /*--------------------------------------------------------------*/
 function  dailySales($year,$month){
   global $db;
@@ -336,7 +336,7 @@ function  dailySales($year,$month){
   return find_by_sql($sql);
 }
 /*--------------------------------------------------------------*/
-/* Fonction pour générer un rapport mensuel des ventes
+/* Function for Generate Monthly sales report
 /*--------------------------------------------------------------*/
 function  monthlySales($year){
   global $db;

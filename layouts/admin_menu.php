@@ -2,17 +2,17 @@
   <li>
     <a href="admin.php">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Tableau de bord</span>
+      <span>Dashboard</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-user"></i>
-      <span>Gestion des utilisateurs</span>
+      <span>User Management</span>
     </a>
     <ul class="nav submenu">
-      <li><a href="group.php">Gérer les groupes</a> </li>
-      <li><a href="users.php">Gérer les utilisateurs</a> </li>
+      <li><a href="group.php">Manage Groups</a> </li>
+      <li><a href="users.php">Manage Users</a> </li>
    </ul>
   </li>
   <li>
@@ -24,38 +24,38 @@
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
-      <span>Produits</span>
+      <span>Products</span>
     </a>
     <ul class="nav submenu">
-       <li><a href="product.php">Gérer les produits</a> </li>
-       <li><a href="add_product.php">Ajouter des produits</a> </li>
+       <li><a href="product.php">Manage Products</a> </li>
+       <li><a href="add_product.php">Add Products</a> </li>
    </ul>
   </li>
   <li>
     <a href="media.php" >
       <i class="glyphicon glyphicon-picture"></i>
-      <span>Fichiers multimédias</span>
+      <span>Media Files</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-credit-card"></i>
-       <span>Ventes</span>
+       <span>Sales</span>
       </a>
       <ul class="nav submenu">
-         <li><a href="sales.php">Gérer les ventes</a> </li>
-         <li><a href="add_sale.php">Ajouter une vente</a> </li>
+         <li><a href="sales.php">Manage Sales</a> </li>
+         <li><a href="add_sale.php">Add Sale</a> </li>
      </ul>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-duplicate"></i>
-       <span>Rapport des ventes</span>
+       <span>Sales Report</span>
       </a>
       <ul class="nav submenu">
-        <li><a href="sales_report.php">Ventes par dates </a></li>
-        <li><a href="monthly_sales.php">Ventes mensuelles</a></li>
-        <li><a href="daily_sales.php">Ventes quotidiennes</a> </li>
+        <li><a href="sales_report.php">Sales by dates </a></li>
+        <li><a href="monthly_sales.php">Monthly sales</a></li>
+        <li><a href="daily_sales.php">Daily sales</a> </li>
       </ul>
   </li>
 </ul>

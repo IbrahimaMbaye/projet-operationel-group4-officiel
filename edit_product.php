@@ -1,7 +1,7 @@
 <?php
   $page_title = 'Edit product';
   require_once('includes/load.php');
-  // Consigner Quel niveau l’utilisateur est autorisé à afficher cette page
+  // Checkin What level user has permission to view this page
    page_require_level(2);
 ?>
 <?php
@@ -61,7 +61,7 @@ if(!$product){
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Ajouter un nouveau produit</span>
+            <span>Add New Product</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -79,7 +79,7 @@ if(!$product){
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                    <option value=""> Sélectionnez une catégorie</option>
+                    <option value=""> Select a categorie</option>
                    <?php  foreach ($all_categories as $cat): ?>
                      <option value="<?php echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif; ?> >
                        <?php echo remove_junk($cat['name']); ?></option>
@@ -88,7 +88,7 @@ if(!$product){
                   </div>
                   <div class="col-md-6">
                     <select class="form-control" name="product-photo">
-                      <option value=""> Pas d’image</option>
+                      <option value=""> No image</option>
                       <?php  foreach ($all_photo as $photo): ?>
                         <option value="<?php echo (int)$photo['id'];?>" <?php if($product['media_id'] === $photo['id']): echo "selected"; endif; ?> >
                           <?php echo $photo['file_name'] ?></option>
@@ -102,7 +102,7 @@ if(!$product){
                <div class="row">
                  <div class="col-md-4">
                   <div class="form-group">
-                    <label for="qty">Quantité</label>
+                    <label for="qty">Quantity</label>
                     <div class="input-group">
                       <span class="input-group-addon">
                        <i class="glyphicon glyphicon-shopping-cart"></i>
@@ -113,10 +113,10 @@ if(!$product){
                  </div>
                  <div class="col-md-4">
                   <div class="form-group">
-                    <label for="qty">Prix d’achat</label>
+                    <label for="qty">Buying price</label>
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon">FCFA</i>
+                        <i class="glyphicon glyphicon-usd"></i>
                       </span>
                       <input type="number" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']);?>">
                       <span class="input-group-addon">.00</span>
@@ -125,10 +125,10 @@ if(!$product){
                  </div>
                   <div class="col-md-4">
                    <div class="form-group">
-                     <label for="qty">Prix de vente</label>
+                     <label for="qty">Selling price</label>
                      <div class="input-group">
                        <span class="input-group-addon">
-                         <i class="glyphicon">FCFA</i>
+                         <i class="glyphicon glyphicon-usd"></i>
                        </span>
                        <input type="number" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']);?>">
                        <span class="input-group-addon">.00</span>
@@ -137,7 +137,7 @@ if(!$product){
                   </div>
                </div>
               </div>
-              <button type="submit" name="product" class="btn btn-danger">Mettre à jour</button>
+              <button type="submit" name="product" class="btn btn-danger">Update</button>
           </form>
          </div>
         </div>

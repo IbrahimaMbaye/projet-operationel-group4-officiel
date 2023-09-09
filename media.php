@@ -30,7 +30,7 @@
         <div class="panel panel-default">
           <div class="panel-heading clearfix">
             <span class="glyphicon glyphicon-camera"></span>
-            <span>Toutes les photos</span>
+            <span>All Photos</span>
             <div class="pull-right">
               <form class="form-inline" action="media.php" method="POST" enctype="multipart/form-data">
               <div class="form-group">
@@ -39,7 +39,7 @@
                     <input type="file" name="file_upload" multiple="multiple" class="btn btn-primary btn-file"/>
                  </span>
 
-                 <button type="submit" name="submit" class="btn btn-default">Télécharger</button>
+                 <button type="submit" name="submit" class="btn btn-default">Upload</button>
                </div>
               </div>
              </form>
@@ -51,7 +51,7 @@
                 <tr>
                   <th class="text-center" style="width: 50px;">#</th>
                   <th class="text-center">Photo</th>
-                  <th class="text-center">Nom de la photo</th>
+                  <th class="text-center">Photo Name</th>
                   <th class="text-center" style="width: 20%;">Photo Type</th>
                   <th class="text-center" style="width: 50px;">Actions</th>
                 </tr>

@@ -52,7 +52,7 @@
         <div class="panel-heading">
           <div class="panel-heading clearfix">
             <span class="glyphicon glyphicon-camera"></span>
-            <span>Modifier ma photo</span>
+            <span>Change My photo</span>
           </div>
         </div>
         <div class="panel-body">
@@ -67,7 +67,7 @@
               </div>
               <div class="form-group">
                 <input type="hidden" name="user_id" value="<?php echo $user['id'];?>">
-                 <button type="submit" name="submit" class="btn btn-warning">Changement</button>
+                 <button type="submit" name="submit" class="btn btn-warning">Change</button>
               </div>
              </form>
             </div>
@@ -79,12 +79,12 @@
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
         <span class="glyphicon glyphicon-edit"></span>
-        <span>Modifier mon compte</span>
+        <span>Edit My Account</span>
       </div>
       <div class="panel-body">
           <form method="post" action="edit_account.php?id=<?php echo (int)$user['id'];?>" class="clearfix">
             <div class="form-group">
-                  <label for="name" class="control-label">Nom</label>
+                  <label for="name" class="control-label">Name</label>
                   <input type="name" class="form-control" name="name" value="<?php echo remove_junk(ucwords($user['name'])); ?>">
             </div>
             <div class="form-group">
@@ -92,8 +92,8 @@
                   <input type="text" class="form-control" name="username" value="<?php echo remove_junk(ucwords($user['username'])); ?>">
             </div>
             <div class="form-group clearfix">
-                    <a href="change_password.php" title="change password" class="btn btn-danger pull-right">Modifier le mot de passe</a>
-                    <button type="submit" name="update" class="btn btn-info">Mettre à jour</button>
+                    <a href="change_password.php" title="change password" class="btn btn-danger pull-right">Change Password</a>
+                    <button type="submit" name="update" class="btn btn-info">Update</button>
             </div>
         </form>
       </div>
