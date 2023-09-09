@@ -6,7 +6,7 @@ class  Media {
   public $fileName;
   public $fileType;
   public $fileTempPath;
-  //Set destination for upload
+  //Définir la destination du téléchargement
   public $userPath = SITE_ROOT.DS.'..'.DS.'uploads/users';
   public $productPath = SITE_ROOT.DS.'..'.DS.'uploads/products';
 
@@ -61,20 +61,20 @@ class  Media {
     if(!empty($this->errors)):
       return false;
     elseif(empty($this->fileName) || empty($this->fileTempPath)):
-      $this->errors[] = "The file location was not available.";
+      $this->errors[] = "L’emplacement du fichier n’était pas disponible.";
       return false;
     elseif(!is_writable($this->productPath)):
       $this->errors[] = $this->productPath." Must be writable!!!.";
       return false;
     elseif(file_exists($this->productPath."/".$this->fileName)):
-      $this->errors[] = "The file {$this->fileName} already exists.";
+      $this->errors[] = "Le fichier {$this->fileName} existe déjà.";
       return false;
     else:
      return true;
     endif;
  }
  /*--------------------------------------------------------------*/
- /* Function for Process media file
+ /* Fonction pour le fichier multimédia de processus
  /*--------------------------------------------------------------*/
   public function process_media(){
     if(!empty($this->errors)){
@@ -91,7 +91,7 @@ class  Media {
       }
 
     if(file_exists($this->productPath."/".$this->fileName)){
-      $this->errors[] = "The file {$this->fileName} already exists.";
+      $this->errors[] = "Le fichier {$this->fileName}.";
       return false;
     }
 
@@ -111,7 +111,7 @@ class  Media {
 
   }
   /*--------------------------------------------------------------*/
-  /* Function for Process user image
+  /* Fonction pour l’image utilisateur de processus
   /*--------------------------------------------------------------*/
  public function process_user($id){
 
@@ -144,7 +144,7 @@ class  Media {
          }
 
        } else {
-         $this->errors[] = "The file upload failed, possibly due to incorrect permissions on the upload folder.";
+         $this->errors[] = "Le téléchargement du fichier a échoué, peut-être en raison d’autorisations incorrectes sur le dossier de téléchargement.";
          return false;
        }
     }
@@ -176,7 +176,7 @@ class  Media {
 
    }
 /*--------------------------------------------------------------*/
-/* Function for insert media image
+/* Fonction d’insertion d’image multimédia
 /*--------------------------------------------------------------*/
   private function insert_media(){
 
@@ -191,7 +191,7 @@ class  Media {
 
   }
 /*--------------------------------------------------------------*/
-/* Function for Delete media by id
+/* Fonction pour Supprimer le média par id
 /*--------------------------------------------------------------*/
    public function media_destroy($id,$file_name){
      $this->fileName = $file_name;

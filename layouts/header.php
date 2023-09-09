@@ -16,8 +16,7 @@
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
-
-      <div class="logo pull-left"> Inventory System</div>
+      <div class="logo pull-left"> Système d’inventaire</div>
       <div class="header-content">
       <div class="header-date pull-left">
         <strong><?php echo date("F j, Y, g:i a");?></strong>
@@ -33,19 +32,19 @@
               <li>
                   <a href="profile.php?id=<?php echo (int)$user['id'];?>">
                       <i class="glyphicon glyphicon-user"></i>
-                      Profile
+                      Profil
                   </a>
               </li>
              <li>
                  <a href="edit_account.php" title="edit account">
                      <i class="glyphicon glyphicon-cog"></i>
-                     Settings
+                     Paramètres
                  </a>
              </li>
              <li class="last">
                  <a href="logout.php">
                      <i class="glyphicon glyphicon-off"></i>
-                     Logout
+                     Déconnexion
                  </a>
              </li>
            </ul>

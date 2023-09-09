@@ -20,7 +20,7 @@
         <div class="panel-heading clearfix">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Monthly Sales</span>
+            <span>Ventes mensuelles</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -28,8 +28,8 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Product name </th>
-                <th class="text-center" style="width: 15%;"> Quantity sold</th>
+                <th> Nom du produit </th>
+                <th class="text-center" style="width: 15%;"> Quantité vendue</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
                 <th class="text-center" style="width: 15%;"> Date </th>
              </tr>

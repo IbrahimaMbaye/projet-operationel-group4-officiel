@@ -1,6 +1,6 @@
 <?php
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  //Consigner Quel niveau l’utilisateur est autorisé à afficher cette page
   page_require_level(2);
 ?>
 <?php

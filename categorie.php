@@ -40,15 +40,15 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Category</span>
+            <span>Ajouter une nouvelle catégorie</span>
          </strong>
         </div>
         <div class="panel-body">
           <form method="post" action="categorie.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
+                <input type="text" class="form-control" name="categorie-name" placeholder="Nom de la catégorie">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add Category</button>
+            <button type="submit" name="add_cat" class="btn btn-primary">Ajouter une catégorie</button>
         </form>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>All Categories</span>
+          <span>Toutes les catégories</span>
        </strong>
       </div>
         <div class="panel-body">

@@ -2,7 +2,7 @@
   <li>
     <a href="home.php">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
+      <span>Tableau de bord</span>
     </a>
   </li>
   <li>
@@ -14,17 +14,17 @@
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
-      <span>Products</span>
+      <span>Produits</span>
     </a>
     <ul class="nav submenu">
-       <li><a href="product.php">Manage product</a> </li>
-       <li><a href="add_product.php">Add product</a> </li>
+       <li><a href="product.php">Gérer le produit</a> </li>
+       <li><a href="add_product.php">Ajouter un produit</a> </li>
    </ul>
   </li>
   <li>
     <a href="media.php" >
       <i class="glyphicon glyphicon-picture"></i>
-      <span>Media</span>
+      <span>Média</span>
     </a>
   </li>
 </ul>

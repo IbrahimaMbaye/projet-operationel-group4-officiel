@@ -22,7 +22,7 @@
          </div>
         <?php if( $user_p['id'] === $user['id']):?>
          <ul class="nav nav-pills nav-stacked">
-          <li><a href="edit_account.php"> <i class="glyphicon glyphicon-edit"></i> Edit profile</a></li>
+          <li><a href="edit_account.php"> <i class="glyphicon glyphicon-edit"></i> Modifier le profil</a></li>
          </ul>
        <?php endif;?>
        </div>

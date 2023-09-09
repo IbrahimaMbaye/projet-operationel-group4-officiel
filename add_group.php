@@ -1,12 +1,12 @@
 <?php
   $page_title = 'Add Group';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  // Consigner Quel niveau l’utilisateur est autorisé à afficher cette page
    page_require_level(1);
 ?>
 <?php
   if(isset($_POST['add'])){
-
+  
    $req_fields = array('group-name','group-level');
    validate_fields($req_fields);
 
@@ -45,27 +45,27 @@
 <?php include_once('layouts/header.php'); ?>
 <div class="login-page">
     <div class="text-center">
-       <h3>Add new user Group</h3>
+       <h3>Ajouter un nouveau groupe d’utilisateurs</h3>
      </div>
      <?php echo display_msg($msg); ?>
       <form method="post" action="add_group.php" class="clearfix">
         <div class="form-group">
-              <label for="name" class="control-label">Group Name</label>
+              <label for="name" class="control-label">Nom du groupe</label>
               <input type="name" class="form-control" name="group-name">
         </div>
         <div class="form-group">
-              <label for="level" class="control-label">Group Level</label>
+              <label for="level" class="control-label">Niveau du groupe</label>
               <input type="number" class="form-control" name="group-level">
         </div>
         <div class="form-group">
-          <label for="status">Status</label>
+          <label for="status">Statut</label>
             <select class="form-control" name="status">
               <option value="1">Active</option>
-              <option value="0">Deactive</option>
+              <option value="0">Désactif</option>
             </select>
         </div>
         <div class="form-group clearfix">
-                <button type="submit" name="add" class="btn btn-info">Update</button>
+                <button type="submit" name="add" class="btn btn-info">Mettre à jour</button>
         </div>
     </form>
 </div>

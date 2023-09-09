@@ -6,8 +6,7 @@ body{
   background: #f1f2f7;
   height: 100%;
   width: 100%;
-}
-a{
+}a{
   color :#777;
   text-decoration: none;
 }.padding-top{
@@ -321,5 +320,3 @@ input[type=file]{
   width: 125px;
   height: 125px;
 }
-
-

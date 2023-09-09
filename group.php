@@ -17,18 +17,18 @@
     <div class="panel-heading clearfix">
       <strong>
         <span class="glyphicon glyphicon-th"></span>
-        <span>Groups</span>
+        <span>Groupe</span>
      </strong>
-       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Add New Group</a>
+       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Ajouter un nouveau groupe</a>
     </div>
      <div class="panel-body">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Group Name</th>
-            <th class="text-center" style="width: 20%;">Group Level</th>
-            <th class="text-center" style="width: 15%;">Status</th>
+            <th>Nom du groupe</th>
+            <th class="text-center" style="width: 20%;">Niveau du groupe</th>
+            <th class="text-center" style="width: 15%;">Statut</th>
             <th class="text-center" style="width: 100px;">Actions</th>
           </tr>
         </thead>

@@ -28,7 +28,7 @@ $results = '';
 <html lang="en-US">
  <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <title>Default Page Title</title>
+   <title>Titre de page par défaut</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
    <style>
    @media print {
@@ -79,17 +79,17 @@ $results = '';
   <?php if($results): ?>
     <div class="page-break">
        <div class="sale-head">
-           <h1>Inventory Management System - Sales Report</h1>
-           <strong><?php if(isset($start_date)){ echo $start_date;}?> TILL DATE <?php if(isset($end_date)){echo $end_date;}?> </strong>
+           <h1>Système de gestion des stocks - Rapport des ventes</h1>
+           <strong><?php if(isset($start_date)){ echo $start_date;}?> JUSQU’À CE JOUR <?php if(isset($end_date)){echo $end_date;}?> </strong>
        </div>
       <table class="table table-border">
         <thead>
           <tr>
               <th>Date</th>
-              <th>Product Title</th>
-              <th>Buying Price</th>
-              <th>Selling Price</th>
-              <th>Total Qty</th>
+              <th>Titre du produit</th>
+              <th>Prix d’achat</th>
+              <th>Prix de vente</th>
+              <th>Nombre total de quantités</th>
               <th>TOTAL</th>
           </tr>
         </thead>
@@ -110,15 +110,15 @@ $results = '';
         <tfoot>
          <tr class="text-right">
            <td colspan="4"></td>
-           <td colspan="1">Grand Total</td>
-           <td  class='bg-primary'> 
-           <?php echo number_format(total_price($results)[0], 2);?>FCFA
+           <td colspan="1">Total général</td>
+           <td> FCFA
+           <?php echo number_format(total_price($results)[0], 2);?>
           </td>
          </tr>
          <tr class="text-right">
            <td colspan="4"></td>
-           <td colspan="1">Profit</td>
-           <td class='bg-success'> <?php echo number_format(total_price($results)[1], 2);?>FCFA</td>
+           <td colspan="1">Bénéfice</td>
+           <td> FCFA<?php echo number_format(total_price($results)[1], 2);?></td>
          </tr>
         </tfoot>
       </table>

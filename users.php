@@ -20,20 +20,20 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Users</span>
+          <span>Utilisateurs</span>
        </strong>
-         <a href="add_user.php" class="btn btn-info pull-right">Add New User</a>
+         <a href="add_user.php" class="btn btn-info pull-right">Ajouter un nouvel utilisateur</a>
       </div>
      <div class="panel-body">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Name </th>
-            <th>Username</th>
-            <th class="text-center" style="width: 15%;">User Role</th>
-            <th class="text-center" style="width: 10%;">Status</th>
-            <th style="width: 20%;">Last Login</th>
+            <th>Nom </th>
+            <th>Nom d’utilisateur</th>
+            <th class="text-center" style="width: 15%;">Rôle d’utilisateur</th>
+            <th class="text-center" style="width: 10%;">Statut</th>
+            <th style="width: 20%;">Dernière connexion</th>
             <th class="text-center" style="width: 100px;">Actions</th>
           </tr>
         </thead>
