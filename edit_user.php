@@ -8,7 +8,7 @@
   $e_user = find_by_id('users',(int)$_GET['id']);
   $groups  = find_all('user_groups');
   if(!$e_user){
-    $session->msg("d","Missing user id.");
+    $session->msg("d","Identifiant d'utilisateur manquant.");
     redirect('users.php');
   }
 ?>
@@ -27,10 +27,10 @@
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}',user_level='{$level}',status='{$status}' WHERE id='{$db->escape($id)}'";
          $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Acount Updated ");
+            $session->msg('s',"Compte mis à jour ");
             redirect('edit_user.php?id='.(int)$e_user['id'], false);
           } else {
-            $session->msg('d',' Sorry failed to updated!');
+            $session->msg('d',' Désolé, la mise à jour n a pas pu être effectuée ');
             redirect('edit_user.php?id='.(int)$e_user['id'], false);
           }
     } else {
@@ -51,10 +51,10 @@ if(isset($_POST['update-pass'])) {
           $sql = "UPDATE users SET password='{$h_pass}' WHERE id='{$db->escape($id)}'";
        $result = $db->query($sql);
         if($result && $db->affected_rows() === 1){
-          $session->msg('s',"User password has been updated ");
+          $session->msg('s',"Le mot de passe de l'utilisateur a été mis à jour ");
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         } else {
-          $session->msg('d',' Sorry failed to updated user password!');
+          $session->msg('d',' Désolé, échec de la mise à jour du mot de passe utilisateur !');
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         }
   } else {
@@ -72,21 +72,21 @@ if(isset($_POST['update-pass'])) {
        <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          Update <?php echo remove_junk(ucwords($e_user['name'])); ?> Account
+          Mise à jour Compte <?php echo remove_junk(ucwords($e_user['name'])); ?> 
         </strong>
        </div>
        <div class="panel-body">
           <form method="post" action="edit_user.php?id=<?php echo (int)$e_user['id'];?>" class="clearfix">
             <div class="form-group">
-                  <label for="name" class="control-label">Name</label>
+                  <label for="name" class="control-label">Nom</label>
                   <input type="name" class="form-control" name="name" value="<?php echo remove_junk(ucwords($e_user['name'])); ?>">
             </div>
             <div class="form-group">
-                  <label for="username" class="control-label">Username</label>
+                  <label for="username" class="control-label">Nom d'utilisateur</label>
                   <input type="text" class="form-control" name="username" value="<?php echo remove_junk(ucwords($e_user['username'])); ?>">
             </div>
             <div class="form-group">
-              <label for="level">User Role</label>
+              <label for="level">Rôle d'utilisateur</label>
                 <select class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option <?php if($group['group_level'] === $e_user['user_level']) echo 'selected="selected"';?> value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
@@ -94,14 +94,14 @@ if(isset($_POST['update-pass'])) {
                 </select>
             </div>
             <div class="form-group">
-              <label for="status">Status</label>
+              <label for="status">Statu</label>
                 <select class="form-control" name="status">
                   <option <?php if($e_user['status'] === '1') echo 'selected="selected"';?>value="1">Active</option>
                   <option <?php if($e_user['status'] === '0') echo 'selected="selected"';?> value="0">Deactive</option>
                 </select>
             </div>
             <div class="form-group clearfix">
-                    <button type="submit" name="update" class="btn btn-info">Update</button>
+                    <button type="submit" name="update" class="btn btn-info">Mise à jour</button>
             </div>
         </form>
        </div>
@@ -113,17 +113,17 @@ if(isset($_POST['update-pass'])) {
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          Change <?php echo remove_junk(ucwords($e_user['name'])); ?> password
+          Changer le mot de passe <?php echo remove_junk(ucwords($e_user['name'])); ?> 
         </strong>
       </div>
       <div class="panel-body">
         <form action="edit_user.php?id=<?php echo (int)$e_user['id'];?>" method="post" class="clearfix">
           <div class="form-group">
-                <label for="password" class="control-label">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Type user new password">
+                <label for="password" class="control-label">mot de passe</label>
+                <input type="password" class="form-control" name="password" placeholder="Tapez le nouveau mot de passe de l'utilisateur">
           </div>
           <div class="form-group clearfix">
-                  <button type="submit" name="update-pass" class="btn btn-danger pull-right">Change</button>
+                  <button type="submit" name="update-pass" class="btn btn-danger pull-right">Changer</button>
           </div>
         </form>
       </div>

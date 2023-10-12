@@ -29,7 +29,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Users</p>
+          <p class="text-muted">Utilisateurs</p>
         </div>
        </div>
     </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_categorie['total']; ?> </h2>
-          <p class="text-muted">Categories</p>
+          <p class="text-muted">Catégories</p>
         </div>
        </div>
     </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_product['total']; ?> </h2>
-          <p class="text-muted">Products</p>
+          <p class="text-muted">Des produits</p>
         </div>
        </div>
     </div>
@@ -67,11 +67,11 @@
     <div class="col-md-3">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-green">
-          <i class="glyphicon glyphicon-usd"></i>
+          <i class="glyphicon">FCFA</i>
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
-          <p class="text-muted">Sales</p>
+          <p class="text-muted">Ventes</p>
         </div>
        </div>
     </div>
@@ -84,16 +84,16 @@
        <div class="panel-heading">
          <strong>
            <span class="glyphicon glyphicon-th"></span>
-           <span>Highest Selling Products</span>
+           <span>PRODUITS LES PLUS VENDUS</span>
          </strong>
        </div>
        <div class="panel-body">
          <table class="table table-striped table-bordered table-condensed">
           <thead>
            <tr>
-             <th>Title</th>
-             <th>Total Sold</th>
-             <th>Total Quantity</th>
+             <th>Titre</th>
+             <th>Total vendu</th>
+             <th>Quantité Totale</th>
            <tr>
           </thead>
           <tbody>
@@ -114,7 +114,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>LATEST SALES</span>
+            <span>DERNIÉRES VENTES</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -122,9 +122,9 @@
        <thead>
          <tr>
            <th class="text-center" style="width: 50px;">#</th>
-           <th>Product Name</th>
+           <th>Nom du produit</th>
            <th>Date</th>
-           <th>Total Sale</th>
+           <th>Vente totale</th>
          </tr>
        </thead>
        <tbody>
@@ -151,7 +151,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Recently Added Products</span>
+          <span>PRODUITS RECÉMMENT AJOUTÉS</span>
         </strong>
       </div>
       <div class="panel-body">

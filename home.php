@@ -11,8 +11,8 @@
  <div class="col-md-12">
     <div class="panel">
       <div class="jumbotron text-center">
-         <h1>Welcome User <hr> Inventory Management System</h1>
-         <p>Browes around to find out the pages that you can access!</p>
+         <h1>Bienvenue utilisateur <hr> Système de gestion des stocks</h1>
+         <p>Navigue pour connaître les pages auxquelles vous pouvez accéder!</p>
       </div>
     </div>
  </div>

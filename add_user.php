@@ -24,7 +24,7 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s',"User account has been creted! ");
+          $session->msg('s',"Le compte utilisateur a été créé !");
           redirect('add_user.php', false);
         } else {
           //failed
@@ -44,26 +44,26 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Add New User</span>
+          <span>AJOUTER UN NOUVEL UTILISATEUR</span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6">
           <form method="post" action="add_user.php">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="full-name" placeholder="Full Name">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" name="full-name" placeholder="Nom et prenom">
             </div>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="Username">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name ="password"  placeholder="Password">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control" name ="password"  placeholder="Mot de passe">
             </div>
             <div class="form-group">
-              <label for="level">User Role</label>
+              <label for="level">Rôle d'utilisateur</label>
                 <select class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
@@ -71,7 +71,7 @@
                 </select>
             </div>
             <div class="form-group clearfix">
-              <button type="submit" name="add_user" class="btn btn-primary">Add User</button>
+              <button type="submit" name="add_user" class="btn btn-primary">Ajouter un utilisateur</button>
             </div>
         </form>
         </div>

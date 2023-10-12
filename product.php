@@ -16,9 +16,9 @@
          <div class="pull-right">
          <div>
             
-            <h2>search bar using php</h2>
+            <h2>barre de recherche</h2>
             <form method="post">
-              <label>Search</label>
+              <label>recherche</label>
               <input type="text" name="search">
               <input type="submit" name="submit"> 
             </form>
@@ -38,12 +38,12 @@ if (isset($_POST["submit"])){
         <table class="table table-bordered">
             <thead>
               <tr>
-                <th class="text-center" style="width: 50px;">Name</th>
-                <th class="text-center" style="width: 10%;"> quantity</th>
-                <th class="text-center" style="width: 10%;"> buy price </th>
-                <th class="text-center" style="width: 10%;"> sale price </th>
-                <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> Media Id </th>
+                <th class="text-center" style="width: 50px;">Nom</th>
+                <th class="text-center" style="width: 10%;"> quantité</th>
+                <th class="text-center" style="width: 10%;"> prix d'achat </th>
+                <th class="text-center" style="width: 10%;"> prix de vente </th>
+                <th class="text-center" style="width: 10%;"> Catégories </th>
+                <th class="text-center" style="width: 10%;"> Id du média </th>
                 <th class="text-center" style="width: 10%;"> Date </th>
               </tr>
             </thead>
@@ -72,7 +72,7 @@ if (isset($_POST["submit"])){
 }
 ?>
           </div>
-           <a href="add_product.php" class="btn btn-primary">Add New</a>
+           <a href="add_product.php" class="btn btn-primary">Ajouter un nouveau</a>
          </div>
         </div>
         <div class="panel-body">
@@ -81,12 +81,12 @@ if (isset($_POST["submit"])){
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Photo</th>
-                <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> In-Stock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Selling Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>
+                <th> Titre du produit </th>
+                <th class="text-center" style="width: 10%;"> Catégories </th>
+                <th class="text-center" style="width: 10%;"> En stock </th>
+                <th class="text-center" style="width: 10%;"> Prix d'achat </th>
+                <th class="text-center" style="width: 10%;"> Prix de vente </th>
+                <th class="text-center" style="width: 10%;"> Produit ajouté </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
             </thead>
@@ -109,10 +109,10 @@ if (isset($_POST["submit"])){
                 <td class="text-center"> <?php echo read_date($product['date']); ?></td>
                 <td class="text-center">
                   <div class="btn-group">
-                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
+                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Modifier" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-edit"></span>
                     </a>
-                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
+                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Supprimer" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-trash"></span>
                     </a>
                   </div>

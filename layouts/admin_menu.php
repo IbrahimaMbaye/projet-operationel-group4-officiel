@@ -2,60 +2,60 @@
   <li>
     <a href="admin.php">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
+      <span>Tableau de bord</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-user"></i>
-      <span>User Management</span>
+      <span>Gestion des utilisateurs</span>
     </a>
     <ul class="nav submenu">
-      <li><a href="group.php">Manage Groups</a> </li>
-      <li><a href="users.php">Manage Users</a> </li>
+      <li><a href="group.php">Gérer les groupes</a> </li>
+      <li><a href="users.php">Gérer les utilisateurs</a> </li>
    </ul>
   </li>
   <li>
     <a href="categorie.php" >
       <i class="glyphicon glyphicon-indent-left"></i>
-      <span>Categories</span>
+      <span>Catégories</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
-      <span>Products</span>
+      <span>Produits</span>
     </a>
     <ul class="nav submenu">
-       <li><a href="product.php">Manage Products</a> </li>
-       <li><a href="add_product.php">Add Products</a> </li>
+       <li><a href="product.php">Gérer les produits</a> </li>
+       <li><a href="add_product.php">Ajouter des produits</a> </li>
    </ul>
   </li>
   <li>
     <a href="media.php" >
       <i class="glyphicon glyphicon-picture"></i>
-      <span>Media Files</span>
+      <span>Fichiers multimédias</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-credit-card"></i>
-       <span>Sales</span>
+       <span>Ventes</span>
       </a>
       <ul class="nav submenu">
-         <li><a href="sales.php">Manage Sales</a> </li>
-         <li><a href="add_sale.php">Add Sale</a> </li>
+         <li><a href="sales.php">Gérer les ventes</a> </li>
+         <li><a href="add_sale.php">Ajouter des ventes</a> </li>
      </ul>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-duplicate"></i>
-       <span>Sales Report</span>
+       <span>Rapport des vents</span>
       </a>
       <ul class="nav submenu">
-        <li><a href="sales_report.php">Sales by dates </a></li>
-        <li><a href="monthly_sales.php">Monthly sales</a></li>
-        <li><a href="daily_sales.php">Daily sales</a> </li>
+        <li><a href="sales_report.php">Ventes par dates </a></li>
+        <li><a href="monthly_sales.php">ventes par mensuelles</a></li>
+        <li><a href="daily_sales.php">Ventes par quotitiennes</a> </li>
       </ul>
   </li>
 </ul>
